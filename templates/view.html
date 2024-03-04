@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ images.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="m-5">
+          <div class="row justify-content-center">
+              <div class="col">
+                  <a href="{% url 'gallery' %}" class="btn btn-dark btn-block">Go Back</a>
+                  <div style="height: 90vh" class="card-my-2 m-3">
+                      <img style="max-width: 100%; max-height: 100%" src="{{ images.image.url }}">
+                  </div>
+                  <p class="m-3">{{ images.category.name }}:  {{ images.title }}</p>
+                  <p class="m-3">Uploaded by: {{ request.user }}</p>
+                  <p class="m-3">Uploaded at: {{ images.timestamp.date }}</p>
+                  <a href="{% url 'delete_image' images.id %}"  class="btn btn-dark m-3 ">Delete</a>
+              </div>
+          </div>
+</body>
+</html>

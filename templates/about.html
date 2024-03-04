@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    .thumbnail-image{
+        height: 200px;
+    }
+    p{
+        font-size: 18px;
+        font-family: "Articulate Light";
+    }
+    .thumbnail-image-1{
+        height: 400px;
+    }
+    .thumbnail-image2{
+        height: 300px;
+    }
+</style>
+<body  class="m-5">
+      <h1 style="text-align: center;font-family: 'Sanskrit Text'">To know about the gallery website</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-5">
+                  <img class="thumbnail-image" src="{% static 'images/Home.png' %}">
+              </div>
+              <div class="col-md-5">
+                  <h3>How to know about main page?</h3>
+                  <p>The main data page to manipulating and view the image data by using user login as well as is to show and manipulating the image by using their category or to add and delete the image with user authentication system.</p>
+                  <a class="btn btn-dark" href="{% url 'gallery' %}">Gallery</a>
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container m-5">
+          <div class="row">
+              <div class="col-md-5">
+                  <h3>Authenticate Your website</h3>
+                  <p>Login and registration page is to login and register by applying the username and pasword to handle the website using user authentication permissios to manipulate, view our photos and data, to add and delete the data.</p>
+              </div>
+              <div class="col-md-5">
+                  <img class="thumbnail-image-1" src="{% static 'images/Login.png' %}">
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-5">
+                  <img class="thumbnail-image" src="{% static 'images/Add Photo.png' %}">
+              </div>
+              <div class="col-md-5">
+                  <h3>How to know about main page?</h3>
+                  <p>Add images by their categories using user authentication also you can add new images with their new categories with user authentication after the adding the images the image added by user is shown to their home page. if image is not added or empty it will show no photos on home page by adding images add image.</p>
+                  <a href="{% url 'add' %}" class="btn btn-dark">Add image</a>
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-5">
+                  <h3>View and Delete images</h3>
+                  <p>To view the image and delete the image by using their image id or number with user authentication.</p>
+                  <a class="btn btn-dark" href="{% url 'gallery' %}">View or delete</a>
+              </div>
+              <div class="col-md-5">
+                  <img class="thumbnail-image2" src="{% static 'images/View.png' %}">
+                  <img class="thumbnail-image2" src="{% static 'images/Delete.png' %}">
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-5">
+                  <img class="thumbnail-image" src="{% static 'images/By category.png' %}">
+              </div>
+              <div class="col-md-5">
+                  <h3>To View images by their categories</h3>
+                  <p>To view the image and delete the image by their categories and their image id or number with user authentication.</p>
+              </div>
+          </div>
+      </div>
+</body>
+</html>
